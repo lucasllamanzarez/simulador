@@ -28,15 +28,7 @@
 
 let castle = 100;
 
-//let Atk = Math.round(Math.random() * 30);
-
 const marcador = [{jugador: "nombre"}];
-
-//Funcion de Ataque
-       // function ataque () {
-              //  castle = castle - Atk;
-//}
-
 
 //la funcion confirm es MUY parecida al prompt pero le envia al usuario el mensaje entre parentesis y solicita ingrese ACEPTAR(genera true) o CANCELAR(genera false). Si pone aceptar inicia el bucle
 let jugador1 = confirm("🏰¿Queres comenzar el juego?🏰"); 
@@ -51,7 +43,7 @@ let jugador1Ataca = confirm(`¿Desea atacar?⚔️`);
 
 if (jugador1Ataca) {
                 let Atk = Math.round(Math.random() * 25);
-//Funcion de Ataque
+//Funcion de Ataque Local
         function ataque () {
                 castle = castle - Atk;
 }
@@ -75,7 +67,7 @@ alert(`⚔️¡Has destruido el castillo!⚔️`);
 marcador.push(prompt('Escribe tu nombre para sumarte a la tabla de posiciones'));
 
 alert(marcador);
-//alert(marcador.sort(a, b)); marcador ordenado
+//alert(marcador.sort(a, b)); Marcador ordenado
 
 let playAgain = confirm(`¿Queres jugar de nuevo?`);
 
