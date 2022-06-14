@@ -28,10 +28,21 @@
 
 let castle = 100;
 
-const marcador = [{jugador: "nombre"}];
+const marcador = [];
+
+function player (player, rondas){
+        this.player = player;
+        this.rondas = rondas;
+    };
+
+function agregar(){
+        marcador.push(nuevoPlayer);
+    }
 
 //la funcion confirm es MUY parecida al prompt pero le envia al usuario el mensaje entre parentesis y solicita ingrese ACEPTAR(genera true) o CANCELAR(genera false). Si pone aceptar inicia el bucle
 let jugador1 = confirm("🏰¿Queres comenzar el juego?🏰"); 
+
+let round = 0;
 
 while (jugador1) {
 
@@ -52,6 +63,10 @@ if (jugador1Ataca) {
         
 alert(`¡Has atacado al castillo! ⚔️ Puntos de vida restantes: ${castle} 🏰`);
 
+//Incremento la ronda en 1 siempre y cuando el valor sea verdadero
+        round ++;
+
+
 } else {
 
 alert(`🏰Hasta la proxima ⚔️ El castillo llego a ${castle} de vida🏰`);
@@ -64,10 +79,17 @@ jugador1 = false;
 
 alert(`⚔️¡Has destruido el castillo!⚔️`);
 
-marcador.push(prompt('Escribe tu nombre para sumarte a la tabla de posiciones'));
+let rondas = round;
+let playerC = prompt("Ingesa tu nombre");
+let rondaC = rondas;
 
-alert(marcador);
-//alert(marcador.sort(a, b)); Marcador ordenado
+nuevoPlayer = new player(playerC, rondaC);
+agregar();
+
+
+alert(marcador.sort());
+console.log(marcador);
+//alert(marcador.sort(a, b)); //Marcador ordenado
 
 let playAgain = confirm(`¿Queres jugar de nuevo?`);
 
