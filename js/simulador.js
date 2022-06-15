@@ -26,22 +26,27 @@
 
 ///version refactorizada
 
+//Vida Castillo
 let castle = 100;
 
-const marcador = [];
+//Posiciones
+const marcador = [{ jugador:"CARLOS", rondas: 20 }, { jugador:"JORGE", rondas: 25 }, { jugador:"OSCAR", rondas:30 }];
 
-function player (player, rondas){
-        this.player = player;
+//Inserta Nuevo Jugador
+function jugador (jugador, rondas){
+        this.jugador = jugador;
         this.rondas = rondas;
     };
 
 function agregar(){
-        marcador.push(nuevoPlayer);
+        marcador.push(nuevoJugador);
     }
+
 
 //la funcion confirm es MUY parecida al prompt pero le envia al usuario el mensaje entre parentesis y solicita ingrese ACEPTAR(genera true) o CANCELAR(genera false). Si pone aceptar inicia el bucle
 let jugador1 = confirm("🏰¿Queres comenzar el juego?🏰"); 
 
+// Genera Ronda
 let round = 0;
 
 while (jugador1) {
@@ -63,7 +68,7 @@ if (jugador1Ataca) {
         
 alert(`¡Has atacado al castillo! ⚔️ Puntos de vida restantes: ${castle} 🏰`);
 
-//Incremento la ronda en 1 siempre y cuando el valor sea verdadero
+//Incremento la ronda en 1 siempre
         round ++;
 
 
@@ -79,23 +84,35 @@ jugador1 = false;
 
 alert(`⚔️¡Has destruido el castillo!⚔️`);
 
+//Genero Variables para guardar datos y luego cargarlos
 let rondas = round;
-let playerC = prompt("Ingesa tu nombre");
+let playerC = prompt("Ingresa tu nombre para sumarte al Ranking");
 let rondaC = rondas;
 
-nuevoPlayer = new player(playerC, rondaC);
+nuevoJugador = new jugador(playerC, rondaC);
 agregar();
 
+//Ordeno Marcador y lo muestro por consola y alert
+marcador.sort((a,b) => a.rondas - b.rondas);
+alert(`RANKING DE JUGADORES:
 
-alert(marcador.sort());
+        1 ${ marcador[ 0 ] . jugador } - ${ marcador[ 0 ] . rondas }
+
+        2 ${ marcador[ 1 ] . jugador } - ${ marcador[ 1 ] . rondas }
+
+        3 ${ marcador[ 2 ] . jugador } - ${ marcador[ 2 ] . rondas }`);
+
 console.log(marcador);
-//alert(marcador.sort(a, b)); //Marcador ordenado
 
+
+//Reinicio juego en caso de que la respuesta sea True
 let playAgain = confirm(`¿Queres jugar de nuevo?`);
 
 if (playAgain) {
 
+//Resetea Vida y Rondas
 castle = 100;
+round = 0;
 
 } else {
 
@@ -106,4 +123,3 @@ jugador1 = false;
 }
 
 }
-
