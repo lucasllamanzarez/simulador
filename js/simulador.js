@@ -38,13 +38,15 @@
                         //Funcion de Ataque Local
                                 function ataque() {
                                         castle = castle - Atk;
+                                        
+                        //Chequeo vida de castillo no sea negativa y muestro que es 0.        
                                 if (castle < 0) {
                                         castle = 0;
                                 }
                         }
                 ataque(castle, Atk);
         alert(`¡Has atacado al castillo! ⚔️ Puntos de vida restantes: ${castle} 🏰`);
-        
+
                 //Incremento la ronda en 1 siempre
                 round++;
 
