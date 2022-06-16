@@ -4,7 +4,7 @@
         let castle = 100;
 
 //Posiciones
-        const marcador = [{ jugador: "Matiass", rondas: 15 }, { jugador: "Fede", rondas: 20 }, { jugador: "Leandro", rondas: 16 }];
+        const marcador = [{ jugador: "Matias", rondas: 15 }, { jugador: "Bernardo", rondas: 20 }, { jugador: "Leandro", rondas: 16 }];
 
 //Inserta Nuevo Jugador
         function jugador(jugador, rondas) {
