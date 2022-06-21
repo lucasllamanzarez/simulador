@@ -4,7 +4,7 @@
         let castle = 100;
 
 //Posiciones.
-        const marcador = [{ jugador: "Matias", rondas: 15 }, { jugador: "Bernardo", rondas: 20 }, { jugador: "Leandro", rondas: 16 }];
+        const marcador = [{ jugador: "Matias", rondas: 15 }, { jugador: "Bernardo", rondas: 20 }, { jugador: "Leandro", rondas: 16 }, { jugador: "Cristian", rondas: 14 }, { jugador: "Jose", rondas: 17 }];
 
 //Inserta Nuevo Jugador.
         function jugador(jugador, rondas) {
@@ -19,26 +19,35 @@
 
 // Funciones para Pop Up
 function OpenModal() {
-        let element = document.getElementById('overlay')
-        element.style.display = 'block'
+        let element = document.getElementById('overlay');
+        element.style.display = 'block';
 }
 
 function CloseModal() {
-        let element = document.getElementById('overlay')
-        element.style.display = 'none'
+        let element = document.getElementById('overlay');
+        element.style.display = 'none';
+        pole.remove
+
 }
 
-//Mostrar Marcador en DIV-UL
-marcador.forEach(function(jugador){
-        let ul = document.createElement("ul");
-        ul.append(marcador.sort((a, b) => a.rondas - b.rondas));
+//Mostrar Marcador
+function Mostrar() {
+        let tabla = marcador.sort((a, b) => a.rondas - b.rondas);
         
-        console.log(ul.textContent); //DEBERIA IR EN LA UL DEL DIV RANKING PERO ME PONE [OBJECT][OBJECT]
-})
+        const rankingNuevo = document.getElementById("pole");
 
-//Funcion Confirm. Si se obtiene valor true, inicia el While.
+        for (let i = 0; i < tabla.length; i++) {
+                const element = tabla[i];
+                
+        const elementoLi = document.createElement('li');
+                elementoLi.innerHTML = tabla[i].jugador +" "+ tabla[i].rondas;
+                        rankingNuevo.appendChild(elementoLi);
+        }
+}
+
+//Funcion initAtk, Inicia Ataque si la respuesta es True.
+function initAtk() {
         let jugador1 = confirm("🏰¿Queres comenzar el juego?🏰");
-
 
 // Genera Ronda.
         let round = 0;  
@@ -91,17 +100,7 @@ marcador.forEach(function(jugador){
         //Llamo funcion para guardar los datos.     
         agregar();
 
-                //Ordeno Marcador y muestro los 3 primeros puestos.
-                        marcador.sort((a, b) => a.rondas - b.rondas);
-                alert(`RANKING DE JUGADORES:
-
-                1 ${marcador[0].jugador} - ${marcador[0].rondas}
-
-                2 ${marcador[1].jugador} - ${marcador[1].rondas}
-
-                3 ${marcador[2].jugador} - ${marcador[2].rondas}`);
-
-        //Reinicio juego en caso de que la respuesta sea True.
+//Reinicio juego en caso de que la respuesta sea True.
                 let playAgain = confirm(`¿Queres jugar de nuevo?`);
 
                         if (playAgain) {
@@ -118,4 +117,5 @@ marcador.forEach(function(jugador){
 
         }
 
+}
 }

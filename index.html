@@ -11,24 +11,22 @@
 </head>
 <body>
 
-<!-- Codigo js Simulador Ataque al castillo -->
-                <script src="js/simulador.js"></script>
-
 <!-- Inicio Codigo HTML -->
                 <h1>Desafio Proyecto Final - Ataque al castillo</h1>
 
-                        <button id="initatk">Comenzar Ataque</button>
+                        <button onclick="initAtk()" id="initatk">Comenzar Ataque</button>
 
 <!-- Pop Up Tabla de posiciones -->
+
                         <div class="overlay" id="overlay">
                             <div class="popup">
                                 <div onclick="CloseModal()" class="CloseIcon">&#10006;
                             </div>
                         <h3>Ranking</h3>
-                        <div class="rank"> <ul id="pole"></ul> </div><!-- Aca deberia mostrar la tabla de posiciones -->
+                        <div class="rank"> <ul id="pole"></ul> </div>
                     </div>
                 </div>
-            <button onclick="OpenModal()">Ranking</button>
+            <button onclick="OpenModal();Mostrar()">Ranking</button>
 
 <!-- Div de combate de 2 columnas -->            
     <div class="combat">
@@ -42,7 +40,8 @@
     </div>
 </div>
 
+<!-- Codigo js Simulador Ataque al castillo -->
+        <script src="js/simulador.js"></script>
+    </body>
 
-
-</body>
 </html>

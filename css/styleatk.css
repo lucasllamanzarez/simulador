@@ -4,6 +4,7 @@
      padding: 0px; 
 }
 
+/* Modificaciones generales*/
 body {
     text-align: center;
         background: url("/images/castle.jpg");
@@ -22,6 +23,19 @@ body button {
         padding: 7.5px;
 }
 
+ul li {
+    text-decoration:none;
+    list-style: none;
+    border: solid 2px; 
+}
+
+ul li:nth-child(even){
+background-color: red;
+}
+ul li:nth-child(odd){
+background-color: steelblue;
+}
+
 /*Pop Up Posiciones*/
 .overlay {
     position: absolute;
@@ -32,13 +46,12 @@ body button {
             left: 0;
         background: rgba(0, 0, 0, 0.8);
     z-index: 2;
+    
   }
 
-  ul .pole:nth-child(even){
-    background-color: red;
-  }
-  ul .pole:nth-child(odd){
-    background-color: steelblue;
+.overlay h3 {
+        background-color: lightblue;    
+        border: solid 2px;    
   }
 
   .popup {
@@ -48,7 +61,7 @@ body button {
                 top: 25%;
             left: 25%;
         text-align: center;
-    background: white;
+    background-color: lightblue; 
   }
  
   .popup h3 {
@@ -60,4 +73,5 @@ body button {
 
   .CloseIcon {
     cursor: pointer;
+    background-color: lightblue;
   }
