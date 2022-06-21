@@ -7,7 +7,7 @@
 /* Modificaciones generales*/
 body {
     text-align: center;
-        background: url("/images/castle.jpg");
+        background: url("../images/castle.jpg");
             background-size: cover;
                 background-repeat: no-repeat;
         background-attachment: fixed;
