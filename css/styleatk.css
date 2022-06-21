@@ -1,0 +1,63 @@
+/* Reseteo */
+* {
+    margin: 0px;
+     padding: 0px; 
+}
+
+body {
+    text-align: center;
+        background: url("/images/castle.jpg");
+            background-size: cover;
+                background-repeat: no-repeat;
+        background-attachment: fixed;
+    height: 100%;
+}
+
+body h1 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+}
+
+body button {
+        padding: 7.5px;
+}
+
+/*Pop Up Posiciones*/
+.overlay {
+    position: absolute;
+        display: none;
+            top: 0;
+                right: 0;
+                bottom: 0;
+            left: 0;
+        background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  ul .pole:nth-child(even){
+    background-color: red;
+  }
+  ul .pole:nth-child(odd){
+    background-color: steelblue;
+  }
+
+  .popup {
+        position: absolute;
+            width: 50%;
+                height: 50%;
+                top: 25%;
+            left: 25%;
+        text-align: center;
+    background: white;
+  }
+ 
+  .popup h3 {
+        font-size: 15px;
+            height: 50px;
+        line-height: 50px;
+    color: black;
+  }
+
+  .CloseIcon {
+    cursor: pointer;
+  }

@@ -17,12 +17,31 @@
                 marcador.push(nuevoJugador);
 }
 
+// Funciones para Pop Up
+function OpenModal() {
+        let element = document.getElementById('overlay')
+        element.style.display = 'block'
+}
+
+function CloseModal() {
+        let element = document.getElementById('overlay')
+        element.style.display = 'none'
+}
+
+//Mostrar Marcador en DIV-UL
+marcador.forEach(function(jugador){
+        let ul = document.createElement("ul");
+        ul.append(marcador.sort((a, b) => a.rondas - b.rondas));
+        
+        console.log(ul.textContent); //DEBERIA IR EN LA UL DEL DIV RANKING PERO ME PONE [OBJECT][OBJECT]
+})
 
 //Funcion Confirm. Si se obtiene valor true, inicia el While.
         let jugador1 = confirm("🏰¿Queres comenzar el juego?🏰");
 
+
 // Genera Ronda.
-        let round = 0;
+        let round = 0;  
 
         while (jugador1) {
 
