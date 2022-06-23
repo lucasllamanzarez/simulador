@@ -2,7 +2,6 @@
 
 //Vida Castillo.
 let castle = 100;
-let presse = document.getElementById('initatk');
 
 //Posiciones.
 const marcador = [{ jugador: "Matias", rondas: 15 }, { jugador: "Bernardo", rondas: 20 }, { jugador: "Leandro", rondas: 16 }, { jugador: "Cristian", rondas: 14 }, { jugador: "Jose", rondas: 17 }];
