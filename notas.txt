@@ -1,0 +1,52 @@
+
+
+
+//PRUEBA
+
+async function initAtk() {
+        
+        await Swal.fire({
+                title: '🏰¿Queres comenzar el juego?🏰',
+                text: "Tu puedes hacerlo",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Ataquemos!'
+        }).then((result) => {
+                if (result.isConfirmed) {
+/*                         Swal.fire(
+                                'Vamos al ataque!',
+                                'Tu ejercito vencera',
+                                'success'
+                        ) */
+                        jugador1 = result.value;
+                        console.log(jugador1);
+                }
+        })
+        //confirm("🏰¿Queres comenzar el juego?🏰");
+
+        // Genera Ronda.
+        let round = 0;
+console.log(round);
+        while (jugador1 == true) {
+                console.log("Entra al while");
+                console.log(castle);
+                ///Si es castillo tiene mas de 0 de vida, sigue el juego.
+                if (castle > 0) {
+
+                        let jugador1Ataca = 
+                        await swal.fire({title: `¿Desea realizar otro ataque?⚔️`})
+                        .then((value) => {jugador1Ataca})
+                        //confirm(`¿Desea atacar?⚔️`);
+                                console.log(jugador1Ataca);
+
+                                function btnE (){
+        e = addEventListener('keypress',);
+
+        if (e == 13){
+                initAtk();
+        }
+
+}
+                
