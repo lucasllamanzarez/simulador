@@ -14,7 +14,10 @@ function jugador(jugador, rondas) {
 
 //Funcion Push.
 function agregar() {
+        
+        localStorage.setItem(nuevoJugador, rondas);
         marcador.push(nuevoJugador);
+        console.log(nuevoJugador);
 }
 
 // Funciones para Pop Up
@@ -27,7 +30,6 @@ function CloseModal() {
         let element = document.getElementById('overlay');
         element.style.display = 'none';
         pole.remove
-
 }
 
 //Mostrar Marcador
@@ -56,6 +58,7 @@ document.addEventListener("keyup", function(event) {
 //Funcion initAtk, Inicia Ataque si la respuesta es True.
 function initAtk() {
         let jugador1 = confirm("🏰¿Queres comenzar el juego?🏰");
+        playerC = prompt("Ingresa tu nombre para sumarte al Ranking");
 
 // Genera Ronda.
         let round = 0;  
@@ -105,7 +108,7 @@ function initAtk() {
 
                         //Variables para guardar datos y luego cargarlos.
                         let rondas = round;
-                        let playerC = prompt("Ingresa tu nombre para sumarte al Ranking");
+                        //playerC = prompt("Ingresa tu nombre para sumarte al Ranking");
                         let rondaC = rondas;
 
                         nuevoJugador = new jugador(playerC, rondaC);
