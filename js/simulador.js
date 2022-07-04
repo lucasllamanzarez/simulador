@@ -135,3 +135,5 @@ function initAtk() {
 
         }
 }
+
+localStorage.setItem('ranking', JSON.stringify(marcador));
