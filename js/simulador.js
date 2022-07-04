@@ -20,6 +20,9 @@ function agregar() {
         console.log(nuevoJugador);
 }
 
+//Guarda Datos en Local Storage
+localStorage.setItem('ranking', JSON.stringify(marcador));
+
 // Funciones para Pop Up
 function OpenModal() {
         let element = document.getElementById('overlay');
@@ -136,4 +139,3 @@ function initAtk() {
         }
 }
 
-localStorage.setItem('ranking', JSON.stringify(marcador));
