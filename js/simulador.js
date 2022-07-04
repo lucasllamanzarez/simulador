@@ -15,7 +15,6 @@ function jugador(jugador, rondas) {
 //Funcion Push.
 function agregar() {
         
-        localStorage.setItem(nuevoJugador, rondas);
         marcador.push(nuevoJugador);
         console.log(nuevoJugador);
 }
